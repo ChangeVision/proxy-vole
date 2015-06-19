@@ -35,7 +35,6 @@ public class Win32ProxyUtils {
 		try {
 			File libFile = DLLManager.findLibFile(); 
 			System.load(libFile.getAbsolutePath());
-			DLLManager.cleanupTempFiles();
 		} catch (IOException e) {
 			throw new RuntimeException("Error loading dll"+e.getMessage(), e); 
 		} 
